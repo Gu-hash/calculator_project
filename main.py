@@ -1,4 +1,13 @@
 import tkinter as tk
+from tkinter import *
+
+expression = ""
+
+def click(num):
+    global expression
+
+    expression += str(num)
+    equation.set(expression);
 
 #Creating the frame for the calculator
 frame = tk.Tk()
