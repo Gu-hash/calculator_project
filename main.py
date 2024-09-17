@@ -27,11 +27,11 @@ result.pack()
 
 #Creating buttons
 button1 = Button(frame, text=' 7 ', fg='blue',bg='gold', command=lambda: click(7), height=1, width=5, font=("arial",20, "bold")).place(x=10,y=100)
-#button1.grid(row= 0, column= 0)
+
 button2 = Button(frame, text=' 8 ', fg='blue',bg='gold', command=lambda: click(8), height=1, width=5)
-#button2.grid(row= 0, column= 1)
+
 button3 = Button(frame, text=' 9 ', fg='blue',bg='gold', command=lambda: click(9), height=1, width=5)
-#button3.grid(row= 0, column= 2)
+
 button4 = Button(frame, text=' / ', fg='blue',bg='gold', command=lambda: click('/'), height=1, width=5)
 #button4.grid(row= 0, column= 3)
 button5 = Button(frame, text=' 4 ', fg='blue',bg='gold', command=lambda: click(4), height=1, width=5)
@@ -58,4 +58,6 @@ button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: click(
 #button15.grid(row= 3, column= 2)
 button16 = Button(frame, text=' + ', fg='blue',bg='gold', command=lambda: click('+'), height=1, width=5)
 #button16.grid(row= 3, column= 3)
+
+
 frame.mainloop() #starts the event loop
