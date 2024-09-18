@@ -3,10 +3,12 @@ from tkinter import *
 
 expression = ""
 
-def click(num):
+def click(value):
     global expression
+    expression += str(value)
+    result.config(text= expression)
 
-    expression += str(num)
+   
     
 
 #Creating the frame for the calculator
