@@ -4,7 +4,7 @@ from tkinter import *
 #Creating the frame for the calculator
 frame = tk.Tk()
 frame.title("Calculator")
-frame.geometry("370x400")
+frame.geometry("370x420")
 
 
 #Creating an entry label
@@ -60,10 +60,10 @@ button13 = Button(frame, text=' 0 ', fg='blue',bg='gold', command=lambda: click(
 #button13.grid(row= 3, column= 0)
 button14 = Button(frame, text=' . ', fg='blue',bg='gold', command=lambda: click('.'), height=1, width=4, font=("arial",20, "bold")).place(x=95,y=295)
 #button14.grid(row= 3, column= 1)
-button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: clear(), height=1, width=4, font=("arial",20, "bold")).place(x=180,y=295)
+button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: clear(), height=3, width=4, font=("arial",20, "bold")).place(x=180,y=295)
 #button15.grid(row= 3, column= 2)
-button16 = Button(frame, text=' + ', fg='blue',bg='gold', command=lambda: click('+'), height=1, width=4, font=("arial",20, "bold")).place(x=265,y=295)
+button16 = Button(frame, text=' + ', fg='blue',bg='gold', command=lambda: click('+'), height=3, width=4, font=("arial",20, "bold")).place(x=265,y=295)
 #button16.grid(row= 3, column= 3)
-
+button17 = Button(frame, text=' = ', fg='blue',bg='gold', command=lambda: click('='), height=1, width=9, font=("arial",20, "bold")).place(x=10,y=360)
 
 frame.mainloop() #starts the event loop
