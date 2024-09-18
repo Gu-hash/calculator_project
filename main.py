@@ -24,6 +24,18 @@ def clear():
     expression = ""
     result.config(text= expression)
 
+def calculate():
+    global expression
+    answer = ""
+    if expression != "":
+        try:
+            answer = eval(expression)
+        except:
+            answer= "error"
+            expression = ""
+    
+    result.config(text= answer)
+
 
 #textbox = tk.Text(frame, height=20, width=40)
 #textbox.pack()
@@ -64,6 +76,6 @@ button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: clear(
 #button15.grid(row= 3, column= 2)
 button16 = Button(frame, text=' + ', fg='blue',bg='gold', command=lambda: click('+'), height=3, width=4, font=("arial",20, "bold")).place(x=265,y=295)
 #button16.grid(row= 3, column= 3)
-button17 = Button(frame, text=' = ', fg='blue',bg='gold', command=lambda: click('='), height=1, width=9, font=("arial",20, "bold")).place(x=10,y=360)
+button17 = Button(frame, text=' = ', fg='blue',bg='gold', command=lambda: calculate(), height=1, width=9, font=("arial",20, "bold")).place(x=10,y=360)
 
 frame.mainloop() #starts the event loop
