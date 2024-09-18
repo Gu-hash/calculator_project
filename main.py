@@ -5,10 +5,12 @@ from tkinter import *
 frame = tk.Tk()
 frame.title("Calculator")
 frame.geometry("370x420")
+frame.configure(bg="light grey")
 
 
 #Creating an entry label
 result = Label(frame, width=25, height= 2, text="", font=("arial", 30))
+result.configure(bg="light grey")
 result.pack()
 
 
