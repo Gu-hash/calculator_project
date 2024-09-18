@@ -1,16 +1,6 @@
 import tkinter as tk
 from tkinter import *
 
-expression = ""
-
-def click(value):
-    global expression
-    expression += str(value)
-    result.config(text= expression)
-
-   
-    
-
 #Creating the frame for the calculator
 frame = tk.Tk()
 frame.title("Calculator")
@@ -20,6 +10,20 @@ frame.geometry("370x400")
 #Creating an entry label
 result = Label(frame, width=25, height= 2, text="", font=("arial", 30))
 result.pack()
+
+
+expression = ""
+
+def click(value):
+    global expression
+    expression += str(value)
+    result.config(text= expression)
+
+def clear():
+    global expression
+    expression = ""
+    result.config(text= expression)
+
 
 #textbox = tk.Text(frame, height=20, width=40)
 #textbox.pack()
@@ -56,7 +60,7 @@ button13 = Button(frame, text=' 0 ', fg='blue',bg='gold', command=lambda: click(
 #button13.grid(row= 3, column= 0)
 button14 = Button(frame, text=' . ', fg='blue',bg='gold', command=lambda: click('.'), height=1, width=4, font=("arial",20, "bold")).place(x=95,y=295)
 #button14.grid(row= 3, column= 1)
-button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: click('C'), height=1, width=4, font=("arial",20, "bold")).place(x=180,y=295)
+button15 = Button(frame, text=' C ', fg='blue',bg='gold', command=lambda: clear(), height=1, width=4, font=("arial",20, "bold")).place(x=180,y=295)
 #button15.grid(row= 3, column= 2)
 button16 = Button(frame, text=' + ', fg='blue',bg='gold', command=lambda: click('+'), height=1, width=4, font=("arial",20, "bold")).place(x=265,y=295)
 #button16.grid(row= 3, column= 3)
